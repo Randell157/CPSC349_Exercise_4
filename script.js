@@ -14,13 +14,6 @@ async function downloadComments(postId) {
   return comments;
 }
 
-async function getUserName(userId) {
-  const userURL = `https://jsonplaceholder.typicode.com/users/${userId}`;
-  const response = await fetch(userURL);
-  const user = await response.json();
-  return user.name;
-}
-
 function getArticleId(comments) {
   const article = comments.previousElementSibling;
   const data = article.dataset;
