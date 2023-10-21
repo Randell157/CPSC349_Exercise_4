@@ -35,21 +35,17 @@ for (const detail of details) {
   });
 }
 
-function displayArticle(article){
+const article = document.querySelector("article");
 
-}
-const article = document.getElementsByTagName("article");
-const h2 = document.getElementsByTagName("h2");
-const aside = document.getElementsByTagName("aside");
-const p = document.getElementsByTagName("p");
+const h2 = document.querySelector("h2");
+h2.innerHTML = data.postId.title;
+let asides = document.getElementsByTagName("aside");
+let ps = document.getElementsByTagName("p");
 
-function displaySummary(){
-  const summary = document.getElementsByTagName("summary");
-
-}
-const section = document.getElementsByTagName("section");
-const header = document.getElementsByTagName("header");
-const h3 = document.getElementsByTagName("h3");
+let summarys = document.getElementsByTagName("summary");
+let sections = document.getElementsByTagName("section");
+let headers = document.getElementsByTagName("header");
+let h3s = document.getElementsByTagName("h3");
 
 const posts = await downloadPosts();
 console.log(posts);
